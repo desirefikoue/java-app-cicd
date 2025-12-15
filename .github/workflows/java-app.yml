@@ -13,7 +13,7 @@ permissions:
   id-token: write
   contents: read
 
-  env:
+env:
   ARTIFACTORY_URL: ${{ secrets.ARTIFACT_URL }}
   SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -23,8 +23,7 @@ permissions:
   VAULT_TOKEN: ${{ secrets.VAULT_TOKEN }}   
   JFROG_REPO_NAME: utc-app
 
- jobs:
-
+jobs:
   sonar:
     runs-on: ubuntu-latest
     steps:
